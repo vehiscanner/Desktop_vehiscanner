@@ -1,0 +1,69 @@
+MDScreen:
+    name:"welcome"
+    
+    MDFloatLayout:
+        md_bg_color: "#0E2547"
+        Container:
+            size_hint_y: .65
+            pos_hint: {'center_y': .25}
+            elevation: 4
+            md_bg_color: "FFFFFF"
+            radius: [74, 0, 0, 0]
+            MDLabel:
+                text: "Selamat datang di"
+                font_name: "MPoppins"
+                font_size: "23sp"
+                pos_hint: {'center_x':.72,'center_y': 0.78}
+            MDLabel:
+                text: "VehiScan"
+                font_name: "SBPoppins"
+                font_size: "23sp"
+                color: "#B106A0"
+                pos_hint: {'center_x':.72,'center_y': 0.71}
+            MDLabel:
+                text:"Aplikasi input data untuk deteksi"
+                font_name:"RPoppins"
+                font_size: "15sp"
+                color: "#A8A8A8"
+                pos_hint: {'center_x': 0.72,'center_y': 0.60}
+            MDLabel:
+                text:"Kendaraan"
+                font_name:"RPoppins"
+                font_size: "15sp"
+                color: "#A8A8A8"
+                pos_hint: {'center_x': 0.72,'center_y': 0.55}
+            MDFillRoundFlatButton:
+                text:"Get Started"
+                font_name:"MPoppins"
+                color: "#FFFFFF"
+                font_size:"18sp"
+                size_hint:.55, .1
+                pos_hint: {'center_x': 0.5,'center_y': 0.40}
+                elevation_normal: 0 
+                on_release:
+                    root.manager.transition.direction = "left"
+                    root.manager.current = "mainpage"
+            MDRoundFlatButton:
+                text:"About Us"
+                font_name:"MPoppins"
+                color: "#FFFFFF"
+                font_size:"18sp"
+                size_hint:.55, .1
+                pos_hint: {'center_x': 0.5,'center_y': 0.23}
+                on_release:
+                    root.manager.transition.direction = "left"
+                    root.manager.current = "aboutus"
+
+    Image:
+        source: "assets/images/detection.png"
+        pos_hint: {'center_x': 0.5,'center_y': 0.6}
+        size_hint: .60, .60
+
+    MDLabel:
+        text: "W E L C O M E"
+        font_name: "MPoppins"
+        font_size: "37sp"
+        color: "#FFFFFF"
+        halign: "center"
+        pos_hint: {'center_x': 0.5,'center_y': 0.85}
+    

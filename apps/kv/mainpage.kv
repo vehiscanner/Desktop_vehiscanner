@@ -1,0 +1,52 @@
+MDScreen:
+    name:"mainpage"
+
+    MDFloatLayout:
+        md_bg_color: "FFFFFF"
+        Container:
+            size_hint_y: .80
+            pos_hint: {'center_y': .25}
+            elevation: 1
+            md_bg_color: "#0E2547"
+            radius: [74, 0, 0, 0]
+            MDFillRoundFlatButton:
+                text:"Import Vidio"
+                font_name:"RPoppins"
+                md_bg_color: "#B106A0"
+                color: "#FFFFFF"
+                font_size:"16sp"
+                size_hint:.50, .1
+                pos_hint: {'center_x': 0.5,'center_y': 0.54}
+            MDFillRoundFlatButton:
+                text:"Analisis"
+                font_name:"RPoppins"
+                md_bg_color: "#B106A0"
+                color: "#FFFFFF"
+                font_size:"16sp"
+                size_hint:.50, .1
+                pos_hint: {'center_x': 0.5,'center_y': 0.38}
+    MDIconButton:
+        icon:"arrow-left"
+        pos_hint: {"center_y":.91}
+        user_font_size:"20sp"
+        theme_text_color: "Custom"
+        text_color: rgba(71, 92, 119, 255)
+        on_release:
+            root.manager.transition.direction = "right"
+            root.manager.current = "welcome"
+    Image:
+        source: "assets/images/coding.png"
+        pos_hint: {'center_x': 0.53,'center_y': 0.63}
+        size_hint: .8, .8
+    MDLabel:
+        text: "Lets"
+        font_name: "SBPoppins"
+        font_size: "37sp"
+        color: "#000000"
+        pos_hint: {'center_x': 0.85,'center_y': 0.9}
+    MDLabel:
+        text: "Try"
+        font_name: "SBPoppins"
+        font_size: "37sp"
+        color: "#B106A0"
+        pos_hint: {'center_x': 1.05,'center_y': 0.9}
